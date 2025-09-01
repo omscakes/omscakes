@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <link rel="stylesheet" href="about.css">
+  <link rel="icon" type="image/png" href="background.jpg">
+</head>
+<body>
+
+  <header>
+    <a href="index.html"><img src="logo.png" class="logo"></a>
+
+    <!-- Hamburger Menu -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Our Menu</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </header>
+
+  <section class="about-section">
+    <div class="about-info">
+      <h1>👩‍🍳 About Us</h1>
+      <p class="desc">
+        Welcome to our shop! We specialize in freshly baked cupcakes and treats made with love.  
+        Our mission is to bring sweetness to your everyday moments—whether it&apos;s for birthdays, parties, or simply treating yourself.  
+      </p>
+      <p class="desc">
+        We take pride in using quality ingredients and ensuring every bite is delightful.  
+        At our shop, every cupcake tells a story of passion and care.  
+      </p>
+      <p class="desc">
+        Visit us in Parañaque City or follow us on social media to stay updated with our latest creations.  
+        We can&apos;t wait to serve you!
+      </p>
+    </div>
+  </section>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+      const menu = document.querySelector('header ul');
+      menu.classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>

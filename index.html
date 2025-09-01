@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omscakes</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" type="image/png" href="background.jpg">
+</head>
+<body>
+  <div class="ball"></div>
+  <section>
+    <header>
+      <a href="index.html"><img src="logo.png" class="logo"></a>
+      
+      <!-- Hamburger Menu -->
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Our Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </header>
+
+    <div class="container">
+      <div class="content">
+        <h1>Welcome to Oms<span>Cakes</span></h1>
+        <h2>Order Your Cupcakes</h2>
+        <p>At OCAKES, we believe that life is too short for bland desserts! Our cupcakes are crafted with love, passion, and the finest ingredients, bringing you a burst of flavor with every bite. Whether you're celebrating a milestone or just in the mood for something sweet, OCAKES has the perfect treat for you.</p>
+        <a href="https://www.facebook.com/profile.php?id=61579798312221">Order Now</a>
+      </div>
+
+      <div class="products">
+        <img src="OmsDeLech.png" class="cupcake">
+      </div>
+
+      <ul class="click">
+        <li><img src="OmsChocola.png" onclick="imgSlider('OmsChocola.png');changecolor('#7B3F00')"></li>
+        <li><img src="OmsMocha.png" onclick="imgSlider('OmsMocha.png');changecolor('#967969')"></li>
+        <li><img src="OmsDeLech.png" onclick="imgSlider('OmsDeLech.png');changecolor('#FFD29A')"></li>
+      </ul>
+    </div>
+
+    <script type="text/javascript">
+      function imgSlider(anything){
+        document.querySelector('.cupcake').src = anything;
+      }
+
+      function changecolor(color){
+        const ball = document.querySelector('.ball');
+        ball.style.background = color;
+      }
+
+      function toggleMenu() {
+        const menu = document.querySelector('header ul');
+        menu.classList.toggle('show');
+      }
+    </script>
+  </section>
+</body>
+</html>

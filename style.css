@@ -1,0 +1,338 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.logo{
+  height: 90px;
+  width: 190px;
+  margin-top: 30px;
+
+}
+section{
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  padding: 100px;
+  justify-content: space-between;
+}
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -40px;
+}
+header ul{
+  position: relative;
+  display: flex;
+  margin-left: 200px;
+}
+header ul li{
+  list-style: none;
+
+}
+header ul li a{
+  display: inline-block;
+  margin-left: 60px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #474747;
+
+}
+
+header ul li a:hover {
+  color: #c18051; 
+}
+
+.container{
+  position: relative;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+}
+
+.content{
+  position: relative;
+  width: 50%;
+  margin-top: 50px;
+}
+
+.content h1{
+  font-size: 3em;
+  color: #2E2E2E;
+  font-weight: normal;
+}
+.content h1 span{
+  color:#FF3343;
+  font-weight: bold;
+
+}
+.content h2{
+  color: #2E2E2E;
+  line-height: 50px;
+}
+.content p{
+  position: relative;
+  color: 363636;
+  padding-top: 20px;
+}
+.content a{
+  display: inline-block;
+  color: #fff;
+  padding: 10px 20px; 
+  background: #FF3343;
+  border-radius: 50px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  margin-top: 50px;
+}
+.products{
+  margin-top: 50px;
+}
+.cupcake{
+  height: 430px;
+  width: 450px;
+}
+.click li{
+  list-style: none;
+
+}
+.click img{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 30px 0px 0px 30px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.click img:hover{
+  transform: translateX(-15px);
+
+}
+.ball{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  clip-path: circle(500px at right 700px);
+  background : #FFD29A;
+}
+
+/* === HAMBURGER MENU === */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  justify-content: space-between;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  background: #474747;
+  border-radius: 2px;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 1200px) {
+  section {
+    flex-direction: column;
+    padding: 50px 30px;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .content {
+    width: 90%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .products {
+    margin-top: 30px;
+  }
+  .cupcake {
+    width: 300px;
+    height: auto;
+  }
+  header {
+    flex-direction: column;
+    padding: 20px 30px;
+  }
+  header ul {
+    margin-left: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  header ul li a {
+    margin: 10px 15px;
+  }
+  .click img {
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    position: relative; /* change from absolute */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    z-index: 1000; /* ensure it stays on top */
+    background: #fff; /* optional: add background for clarity */
+  }
+
+  .menu-toggle {
+    display: flex;
+    order: 1; /* make sure it’s first */
+  }
+
+  header ul {
+    display: none; /* hide by default */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 70px; /* below header */
+    left: 0;
+    background: #fff;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+
+  header ul.show {
+    display: flex;
+  }
+
+  header ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  header ul li a {
+    font-size: 14px;
+    margin: 8px 0;
+  }
+
+  .container {
+    position: relative;
+    top: -110px; /* nudges it up */
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 30px 20px;
+  }
+  .logo {
+    height: 70px;
+    width: 150px;
+    margin-top: 10px;
+  }
+  .content h1 {
+    font-size: 1.5em;
+  }
+  .content h2 {
+    line-height: 30px;
+  }
+  .content a {
+    padding: 8px 16px;
+    margin-top: 30px;
+  }
+  .cupcake {
+    width: 200px;
+  }
+  .click img {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+  }
+}
+
+/* === RESPONSIVE DESIGN ADJUSTMENT FOR BALL === */
+@media (max-width: 1200px) {
+  .ball {
+    height: 40%; /* adjust how much of the bottom it fills */
+    bottom: 0;
+    top: auto; /* override absolute top */
+    left: 0;
+    clip-path: ellipse(100% 100% at 50% 100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .ball {
+    height: 50%; /* fills more of the bottom for smaller screens */
+    bottom: 0;
+    top: auto;
+    clip-path: ellipse(100% 100% at 50% 100%);
+  }
+}
+
+@media (max-width: 480px) {
+  .ball {
+    height: 60%; /* more coverage on very small screens */
+    bottom: 0;
+    top: auto;
+    clip-path: ellipse(100% 100% at 50% 100%);
+  }
+}
+
+/* === RESPONSIVE: CLICK BELOW ORDER NOW BUTTON === */
+@media (max-width: 1200px) {
+  .click {
+    display: flex;
+    justify-content: center; /* center thumbnails */
+    margin: 20px 0 0 0; /* space below button */
+  }
+
+  .click li {
+    margin: 0 10px;
+  }
+
+  .click img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .click {
+    margin-top: 15px;
+    flex-wrap: wrap;
+    gap: 10px; /* spacing between thumbnails */
+  }
+
+  .click img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .click {
+    margin-top: 10px;
+    gap: 8px;
+  }
+
+  .click img {
+    width: 30px;
+    height: 30px;
+  }
+}
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="contact.css">
+  <link rel="icon" type="image/png" href="background.jpg">
+</head>
+<body>
+
+  <header>
+      <a href="index.html"><img src="logo.png" class="logo"></a>
+      
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Our Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </header>
+
+  <section class="contact-section">
+    <div class="contact-info">
+      <h1>📞 Contact Us</h1>
+      <p class="desc">If you have any questions, suggestions, or feedback, feel free to reach out.  
+      You can email us, call us, or visit our shop anytime.  
+      We're always happy to assist you!</p>
+      <div class="contact-details">
+        <p><b>📧 Email:</b> omscakes2025@gmail.com</p>
+        <p><b>📱 Phone:</b> +0991-046-6526</p>
+        <p><b>📘 Facebook Page:</b> 
+          <a href="https://www.facebook.com/profile.php?id=61579798312221" target="_blank">
+            OmsCakes
+          </a>
+        </p>
+        <p><b>📍 Address:</b> Parañaque City, Philippines</p>
+      </div>
+    </div>
+  </section>
+
+  <script type="text/javascript">
+
+
+      function toggleMenu() {
+        const menu = document.querySelector('header ul');
+        menu.classList.toggle('show');
+      }
+    </script>
+
+</body>
+</html>
